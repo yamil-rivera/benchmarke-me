@@ -14,4 +14,10 @@ sqlite> CREATE TABLE tokens(id INTEGER PRIMARY KEY, encoded_token VARCHAR(255) N
 ## Benchmark
 ```
 $ ab -n 50 -c 50  http://localhost:8080/stress/5
+
+$ termgraph benchmark.txt
+
+java/sequential            : ▇▇▇▇▇▇▇▇▇▇ 10.87
+clojure-ring/sequential    : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 30.95
+clojure-pedestal/sequential: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 30.54
 ```

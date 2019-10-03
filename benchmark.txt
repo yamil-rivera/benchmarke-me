@@ -1,0 +1,4 @@
+# mean [ms], across all concurrent requests
+java/sequential 10.870
+clojure-ring/sequential 30.946
+clojure-pedestal/sequential 30.539
