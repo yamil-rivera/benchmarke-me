@@ -15,9 +15,9 @@ public class Configuration {
 
 		Log.setLogLevel(LogLevel.TRACE);
 
-		jdbcClient = JDBC.driver("com.mysql.jdbc.Driver");
+		jdbcClient = JDBC.driver("org.sqlite.JDBC");
 		//jdbcClient.url("jdbc:mysql://mysql:Welcome@localhost:3306/encrypted_tokens?logger=Slf4JLogger&profileSQL=true");
-		jdbcClient.url("jdbc:mysql://mysql:Welcome@localhost:3306/encrypted_tokens");
+		jdbcClient.url("jdbc:sqlite:sample.db");
 		jdbcClient.init();
 
 	}
