@@ -6,7 +6,8 @@
                  [ring/ring-jetty-adapter "1.7.1"]
                  [compojure "1.6.1"]
                  [seancorfield/next.jdbc "1.0.8"]
-                 [org.xerial/sqlite-jdbc "3.28.0"]]
+                 [org.xerial/sqlite-jdbc "3.28.0"]
+                 [com.zaxxer/HikariCP "3.4.1"]]
   :main ^:skip-aot clojure-ring.core
   :target-path "target/%s"
   :global-vars {*warn-on-reflection* true}

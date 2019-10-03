@@ -17,7 +17,7 @@ $ ab -n 50 -c 50  http://localhost:8080/stress/5
 
 $ termgraph benchmark.txt
 
-java/sequential            : ▇▇▇▇▇▇▇▇▇▇ 10.87
-clojure-ring/sequential    : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 30.95
-clojure-pedestal/sequential: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 30.54
+java/sequential            : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.50
+clojure-ring/sequential    : ▇▇▇▇▇▇▇▇▇▇▇ 11.85
+clojure-pedestal/sequential: ▇▇▇▇▇▇▇▇▇▇ 10.57
 ```
