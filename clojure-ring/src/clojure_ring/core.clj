@@ -4,7 +4,6 @@
             [compojure.route :as route]
             [compojure.coercions :refer [as-int]]
             [clojure-ring.db :as db]
-            [next.jdbc :as jdbc]
             [ring.adapter.jetty :refer [run-jetty]])
   (:import (java.util Random)
            (java.security MessageDigest)))
