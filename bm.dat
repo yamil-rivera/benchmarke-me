@@ -1,0 +1,4 @@
+# Percentage of the requests served within a certain time (ms)
+@ 50%, 66%, 75%, 80%, 90%, 95%, 99%
+java/sequential,172,179,182,186,301,407,514
+clojure-ring/sequential,147,167,178,180,264,473,676
