@@ -1,6 +1,7 @@
 (ns clojure-ring.core
   (:gen-class)
-  (:require [compojure.core :refer :all]
+  (:require [clojure.core.async :refer [chan to-chan pipeline <!!]]
+            [compojure.core :refer :all]
             [compojure.route :as route]
             [compojure.coercions :refer [as-int]]
             [clojure-ring.db :as db]
@@ -25,6 +26,14 @@
   (str "I worked out " loop-count " times!"))
 
 (defn- async-process [loop-count]
+  (let [req-ch (to-chan (range loop-count))
+        token-ch (chan 10)
+        done-ch (chan 10)
+        cpus (.availableProcessors (Runtime/getRuntime))]
+    (pipeline cpus token-ch (map (fn [_] (cpu-workout))) req-ch)
+    (pipeline cpus done-ch (map io-workout) token-ch)
+    ;; wait until done
+    (while (not (nil? (<!! done-ch))) (print ".")))
   (str "I worked out " loop-count " times!"))
 
 (defroutes app-routes
