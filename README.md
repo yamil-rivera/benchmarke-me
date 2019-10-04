@@ -15,9 +15,13 @@ sqlite> CREATE TABLE tokens(id INTEGER PRIMARY KEY, encoded_token VARCHAR(255) N
 ```
 $ ab -n 50 -c 50  http://localhost:8080/stress/5
 
-$ termgraph benchmark.txt
-
-java/sequential            : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.50
-clojure-ring/sequential    : ▇▇▇▇▇▇▇▇▇▇▇ 11.85
-clojure-pedestal/sequential: ▇▇▇▇▇▇▇▇▇▇ 10.57
+$ termgraph bm.dat --format '{:.0f}' --color {red,blue,green,magenta,yellow,black,cyan}  --title "Percentage of the requests served within a certain time (ms)"
 ```
+
+A round number on
+```
+MacBook Pro (Retina, 15-inch, Mid 2015)
+Processor 2.2 GHz Intel Core i7
+Memory 16 GB 1600 MHz DDR3
+```
+<img src="bm.png" width="500" height="300">

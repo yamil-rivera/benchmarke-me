@@ -9,6 +9,5 @@
                  [org.xerial/sqlite-jdbc "3.28.0"]
                  [com.zaxxer/HikariCP "3.4.1"]]
   :main ^:skip-aot clojure-ring.core
-  :target-path "target/%s"
   :global-vars {*warn-on-reflection* true}
   :profiles {:uberjar {:aot :all}})
